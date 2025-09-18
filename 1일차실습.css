@@ -1,0 +1,123 @@
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+nav a:hover {
+    background: #357abd;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+body > header,
+body > main,
+body > footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 0px 16px;
+    box-sizing: border-box;
+}
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.menuebar {
+    margin-top: 12px;
+    padding: 8px 0;
+}
+main {
+    min-height: 400px;
+    padding: 20px;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.articles {
+    flex: 1;
+    border: 1px solid gray;
+    padding: 0 16px;
+}
+
+.news1 {
+    background: rgb(205, 219, 10);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: left;
+    
+}
+.news2{
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    
+}
+table th{
+    background-color: blue;
+    color: white;
+    padding: 4;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 8px;
+}
+tr {
+    background-color: whitesmoke;
+}
+tr:nth-child(even) {
+    background-color: skyblue;
+}
+table{
+    width: 100%;
+}
+.sidebar {
+    width: 220px;
+    background: #e2e6ea;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    margin-bottom: 12px;
+}
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.sidebar a:hover {
+    color: #4a90e2;
+}
+.footerDiv {
+
+    border: 1px solid gray;
+    height: auto;
+
+}
