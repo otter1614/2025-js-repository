@@ -41,6 +41,7 @@ function findLongestWord(str) {
     }
     return longestWord;
 }
+console.log(findLongestWord(ExNumThree));
 
 //숫자로 이루어진배열을 입력 받아 배열 내 모든 요소의 합을 반환 하는 함수를 작성하라 reduce() 메서드를 사용하세요
 //[1,2,3,4] => 
@@ -81,7 +82,7 @@ const sqArrau = ExNumSeven.map(num => num ** 2);
 console.log(sqArrau);
 
 
-// 주어진 배열에서 두숫자가 특정 값이 되는 쌍을 찾아 변환하는 함수를 작성하세요
+// 주어진 배열에서 두숫자가 특정 값이 되는 쌍을 찾아 반환하는 함수를 작성하세요
 const ExNumEight = [2,7,11,15];
 const target = 9;
 
@@ -89,7 +90,7 @@ function twoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] + nums[j] === target) {
-                return [num[i], num[j]];
+                return [nums[i], nums[j]];
             }
         }
     }
@@ -97,3 +98,4 @@ function twoSum(nums, target) {
 }
 
 const result = twoSum(ExNumEight, target);
+console.log(result);
