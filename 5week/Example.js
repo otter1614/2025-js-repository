@@ -1,5 +1,6 @@
 //주어진 문자열에서 같은 문자가 연숙ㅈ으로 반복되는 경우 해당 문재 개수를 붙어 압축된 문자열이 기존 문자열보다 길다면 원래 문자열을 반환하라
-const ExNumOne = "aaabbbcccaaa";
+const ExNumOne = "aaabbccc";
+
 function compressString(str) {
   let compressed = "";
   let count = 1;  
@@ -14,6 +15,23 @@ function compressString(str) {
   return compressed.length < str.length ? compressed : str;
 }
 console.log(compressString(ExNumOne));
+
+const ExMento = "aaa bb ccc";
+let resultOne = [];
+let countOne = 1;
+function compressString2(str) {
+  resultOne = str.split(' ');
+  console.log(resultOne);
+// 인덱스 1 , 2 , 3을 기준으로 각 length를 구해서 각 인덱스의 첫글자 + length를 붙여서 출력
+  for (let  i=0; i< resultOne.length; i++){
+    countOne = resultOne[i].length;
+    resultOne[i] = resultOne[i][0] + countOne;
+  } 
+  return resultOne.join('');
+}
+
+console.log(compressString2(ExMento));
+
 
 
 //숫자로 이루어 진 매열을 입력 받아 짝수만 필터링한 배열을 반환하는 함수를 작성하세여 이떄 filter() 메서드를 사용하세요

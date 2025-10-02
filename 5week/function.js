@@ -74,3 +74,73 @@ function function_test8(x) {
 }
 // 커링(curring) 함수이므로 아래와 같이 연속적으로 호출해야 합니다.
 console.log(function_test8(4)(5)(6));
+
+
+//arrow 함수를 일반 함수 형태로 표현할 수 있ㄷ
+const multiply2 = (x,y) => {
+    return x * y;
+}
+console.log(multiply2(3,4));
+
+//함수안에 keyworld인 arguments를 했을 떄 출력이 각 index값을 주는 것으로 보인다
+const multiply3 = function(x,y,z) {
+    console.log(arguments);
+    return x * y * z;
+}
+console.log('-------------------');
+console.log(multiply3(3,4,5));
+
+//prameter를 무한정 받으 경우 -> 향휴 Object 에서 자세히 다룸
+const multiplyAll = function (...args) {
+    return Object.values(arguments).reduce((acc,cur) => acc * cur,1);
+}
+console.log(multiplyAll(1,2,3,4,5));
+
+// 함수의 이름이 없고 즉시 실행하는 함수 형태 함수를 ()안에 function(x,y)를 감싸고 (4,5)로 즉시 실행
+(function(x,y) {
+    console.log(x * y);
+})(4,5);
+
+//함수이름 instanceof Function
+console.log(typeof multiply);
+console.log(multiply instanceof Object);
+
+let iveMenmber = [
+    '안유진',
+    '가을',
+    '레이',
+    '장원영',
+    '리즈',
+    '이서',
+]
+console.log(iveMenmber);
+
+//concat 함수 - push 함수 비슷
+console.log(iveMenmber.concat('연암공대'));
+console.log(iveMenmber);
+console.log('-------------------');
+//slice 함수 - splice 함수와 비슷
+console.log(iveMenmber.slice(0,3));
+console.log(iveMenmber);
+console.log('-------------------');
+
+//spread operator
+let iveMenmber2 = [
+    ...iveMenmber,
+];
+console.log(iveMenmber2);
+
+let iveMenmber3 = [
+    iveMenmber,
+];
+console.log(iveMenmber2);
+
+let iveMenmber4 = iveMenmber;
+console.log(iveMenmber4);
+console.log(iveMenmber4 === iveMenmber);
+
+//spread operator
+// console.log([
+//     ...iveMenmber,
+// ] === iveMenmber);
+// console.log('-----------');
