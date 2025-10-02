@@ -144,3 +144,5 @@ console.log(iveMenmber4 === iveMenmber);
 //     ...iveMenmber,
 // ] === iveMenmber);
 // console.log('-----------');
+
+
